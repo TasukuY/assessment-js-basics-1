@@ -2,7 +2,7 @@
 
 let lowerCaseLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 let upperCaseLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-
+let exclamationMark = '._.\n| |\n| |\n| |\n._.\n _ \n|_|'
 const readline = require('readline');
 const reader = readline.createInterface({
   input: process.stdin,
@@ -10,6 +10,7 @@ const reader = readline.createInterface({
 });
 
 console.log("\nWelcome to the Password Validator tool!")
+console.log(exclamationMark)
 
 reader.question("\nPlease type in the password to validate  ->  ", function(input){
 	
@@ -26,7 +27,6 @@ reader.question("\nPlease type in the password to validate  ->  ", function(inpu
     let uppercaseError = 'The password has to contain at least a uppercase letter. \n'
     let specialCharError = 'The password has to contain at least a special character or a number. \n'
     let errorMessage = ''
-    let exclamationMark = '._.\n| |\n| |\n| |\n._.\n _ \n|_|'
 
     //check if the passwords contains uppercase char and special char
     for(let i = 0; i < passLength; i++){
